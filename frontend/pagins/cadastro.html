@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" /> <!-- Define o charset para acentuação -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsividade -->
+    <title>MegCop</title>
+    <link rel="stylesheet" href="cadastro.css"> <!-- Importa o CSS -->
+  </head>
+  <body>
+    <div class="top-gradient"></div> <!-- Gradiente decorativo no topo -->
+    <div class="cadastro-container"> <!-- Container principal do cadastro -->
+      <img src="../../imgs/Captura de tela 2025-06-12 154854.png" alt="Cadastro imagem" class="cadastro-img"> <!-- Imagem ilustrativa -->
+      <div class="cadastro-content"> <!-- Conteúdo do formulário -->
+        <!-- nav background -->
+        <nav>
+        <h1>Cadastro</h1> <!-- Título da página -->
+        <div class="cadastro-benefits"> <!-- Benefícios do cadastro -->
+          Crie uma conta<br>
+          <span>Acompanhe envios de diversas transportadoras, receba e envie notificações automáticas de rastreio. É gratuito!</span>
+        </div>
+        <form id="cadastro-form"> <!-- Formulário de cadastro -->
+          <label for="nome">Nome:</label><br /> <!-- Campo nome -->
+          <input type="text" id="nome" name="nome" required /><br /><br />
+
+          <label for="sobrenome">Sobrenome:</label><br /> <!-- Campo sobrenome -->
+          <input type="text" id="sobrenome" name="sobrenome" required /><br /><br />
+
+          <label for="email">Email:</label><br /> <!-- Campo email -->
+          <input type="email" id="email" name="email" required /><br /><br />
+          
+          <label for="senha">Senha:</label><br /> <!-- Campo senha -->
+          <input type="password" id="senha" name="senha" required /><br /><br />
+
+          <input type="checkbox" id="aceito" name="aceito" required /> <!-- Aceite dos termos -->
+          <label for="aceito">
+            Eu aceito os <a href="termos.html" target="_blank">Termos de Uso</a> e a
+            <a href="privacidade.html" target="_blank">Política de Privacidade</a>
+          </label><br /><br />
+          <button type="submit">Cadastrar</button> <!-- Botão de envio -->
+        </form>
+        <div class="login-prompt"> <!-- Link para login -->
+          Já tem cadastro na Meg Cop?<br>
+          <a href="./login.html">Entre na sua conta</a>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <div class="footer-content"> <!-- Rodapé -->
+      <p>© 2025 MegCop. Todos os direitos reservados.</p>
+      <p>
+        Desenvolvido por
+        <a href="" target="_blank">Bryan Jackovski, Luis Lunard, Eduardo Isaias e Vitor Jackovski</a>
+    </div>
+    <button id="toggle-theme" class="theme-toggle-btn">Alterar tema</button> <!-- Botão de alternar tema -->
+    <button class="home" onclick="window.location.href='../pagins/home.html'">VOLTAR AO INICIO</button>
+    <script>
+      const toggleButton = document.getElementById('toggle-theme');
+      // Ao carregar a página, verifica o tema salvo
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        // Salva a preferência no localStorage
+        if (document.body.classList.contains('dark')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
+    <script src="cadastro.js"></script>
+  </body>
+    
+</html>

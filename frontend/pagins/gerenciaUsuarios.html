@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão de Usuários - Meg Cop</title>
+    <link rel="stylesheet" href="cadastro.css">
+  </head>
+  <body>
+    <div class="top-gradient"></div>
+    <div class="cadastro-container">
+        <nav>
+        <h1>Gestão de Usuários</h1>
+        <div class="cadastro-benefits">
+          Gerencie os usuários do sistema<br>
+          <span>Busque, liste e exclua usuários cadastrados.</span>
+        </div>
+        <form class="buscar-usuario-form">
+          <label for="usuario-id">Buscar usuário por ID:</label><br />
+          <input type="text" id="usuario-id" name="usuario-id" placeholder="Digite o ID do usuário" /><br /><br />
+          <button type="submit">Buscar</button>
+        </form>
+        <div class="usuarios-lista-container">
+          <h2 class="h3">Lista de Usuários</h2>
+          <table class="relatorio-tabela">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>João Silva</td>
+                <td>joao@email.com</td>
+                <td>Admin</td>
+                <td><button>Deletar</button></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Maria Souza</td>
+                <td>maria@email.com</td>
+                <td>Usuário</td>
+                <td><button>Deletar</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="login-prompt">
+          Voltar para a <a href="./home.html">Home</a>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <div class="footer-content">
+      <p>© 2025 MegCop. Todos os direitos reservados.</p>
+      <p>
+        Desenvolvido por
+        <a href="" target="_blank">Bryan Jackovski, Luis Lunard, Eduardo Isaias e Vitor Jackovski</a>
+    </div>
+    <button id="toggle-theme" class="theme-toggle-btn">Alterar tema</button>
+    <script>
+      const toggleButton = document.getElementById('toggle-theme');
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        if (document.body.classList.contains('dark')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
+  </body>
+</html>

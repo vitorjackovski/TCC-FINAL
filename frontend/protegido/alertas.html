@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alertas</title>
+  <link rel="stylesheet" href="alertas.css" />
+</head>
+<body>
+  <h1>Gerenciar Alertas</h1>
+  <button class="home" onclick="window.location.href='../pagins/home.html'">VOLTAR AO INICIO</button>
+
+  <form id="formAlerta">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo" required />
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" required></textarea>
+
+    <label for="tipo">Tipo:</label>
+    <select id="tipo" name="tipo" required>
+      <option value="">Selecione um tipo</option>
+      <option value="info">Info</option>
+      <option value="aviso">Aviso</option>
+      <option value="alerta">Alerta</option>
+    </select>
+
+    <button type="submit">Criar Alerta</button>
+  </form>
+
+  <section id="listaAlertas"></section>
+
+  <script src="alertas.js"></script>
+
+
+  <button id="toggle-theme" class="theme-toggle-btn">Alterar tema</button>
+
+  <script>
+  const toggleButton = document.getElementById('toggle-theme');
+
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+  });
+</script>
+
+
+</body>
+</html>

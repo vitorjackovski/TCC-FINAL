@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Armazéns - MegCop</title>
+  <link rel="stylesheet" href="armazem.css" />
+</head>
+<body>
+  <button class="home" onclick="window.location.href='../pagins/home.html'">VOLTAR AO INÍCIO</button>
+  <button class="btnTema" id="btnTema">Alterar Tema</button>
+
+  <header>
+    <h1>Armazéns</h1>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h2>Cadastrar Armazém</h2>
+      <form id="formArmazem">
+        <input type="hidden" id="armazem_id" />
+        <input type="text" id="nome" placeholder="Nome do Armazém" required />
+        <input type="text" id="localizacao" placeholder="Localização" required />
+        <input type="number" id="capacidade" placeholder="Capacidade Máxima" required />
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+
+    <section class="lista">
+      <h2>Armazéns Cadastrados</h2>
+      <div id="listaArmazens"></div>
+    </section>
+  </main>
+
+  <script src="armazem.js" defer></script>
+  <script>
+    const toggleButton = document.getElementById('btnTema');
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

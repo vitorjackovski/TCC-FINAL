@@ -1,0 +1,179 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo base da página */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #ffb347, #b35400);
+  color: #333;
+  min-height: 100vh;
+  padding: 40px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+header h1 {
+  font-size: 2rem;
+  color: #b35400;
+  transition: color 0.3s ease;
+}
+
+/* Grupo de botões alinhados verticalmente */
+header .button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Botão voltar */
+.home {
+  background-color: rgb(226, 117, 14);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: black;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.home:hover {
+  background-color: #e2710f;
+}
+
+/* Botão alternar tema */
+.theme-toggle-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #b35400;
+  color: white;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+.theme-toggle-btn:hover {
+  background-color: #903d00;
+}
+
+/* Área principal */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Seções de relatórios */
+.relatorio-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.relatorio-box h2 {
+  color: #b35400;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+thead {
+  background-color: #ffcc99;
+  transition: background-color 0.3s ease;
+}
+th,
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+tbody tr:hover {
+  background-color: #fff4e6;
+  transition: background-color 0.3s ease;
+}
+
+/* ------------------ */
+/* Tema escuro */
+/* ------------------ */
+
+body.dark {
+  background: linear-gradient(to bottom, #222, #111);
+  color: #ddd;
+}
+
+body.dark header {
+  background-color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+body.dark header h1 {
+  color: #ffb347;
+}
+
+body.dark .relatorio-box {
+  background-color: #222;
+  box-shadow: 0 4px 12px rgba(255, 179, 71, 0.3);
+}
+
+body.dark .relatorio-box h2 {
+  color: #ffb347;
+}
+
+body.dark thead {
+  background-color: #444;
+}
+
+body.dark th,
+body.dark td {
+  color: #ddd;
+  border-bottom: 1px solid #555;
+}
+
+body.dark tbody tr:hover {
+  background-color: #333;
+}
+
+body.dark .home {
+  background-color: #ffb347;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(255, 179, 71, 0.7);
+}
+
+body.dark .home:hover {
+  background-color: #e6a835;
+}
+
+body.dark .theme-toggle-btn {
+  background-color: #ffb347;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(255, 179, 71, 0.7);
+}
+
+body.dark .theme-toggle-btn:hover {
+  background-color: #e6a835;
+}

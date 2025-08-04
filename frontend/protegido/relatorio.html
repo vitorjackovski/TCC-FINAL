@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="relatorio.css" />
+  <title>Relatórios</title>
+</head>
+<body>
+  <header>
+    <h1>Relatórios do Sistema</h1>
+    <div class="button-group">
+      <button class="home" onclick="window.location.href='../pagins/home.html'">VOLTAR</button>
+      <button class="theme-toggle-btn" id="btnTema">Alternar Tema</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="relatorio-box">
+      <h2>Resumo Geral</h2>
+      <div id="resumo"></div>
+    </section>
+
+    <section class="relatorio-box">
+      <h2>Produções Recentes</h2>
+      <table id="tabela-producoes">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Data</th>
+            <th>Quantidade</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table> 
+    </section>
+
+    <section class="relatorio-box">
+      <h2>Transportes</h2>
+      <table id="tabela-transportes">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Origem</th>
+            <th>Destino</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Tema persistente -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const temaSalvo = localStorage.getItem("theme");
+      if (temaSalvo === "dark") {
+        document.body.classList.add("dark");
+      }
+
+      const botao = document.getElementById("btnTema");
+      if (botao) {
+        botao.addEventListener("click", () => {
+          document.body.classList.toggle("dark");
+          const novoTema = document.body.classList.contains("dark") ? "dark" : "light";
+          localStorage.setItem("theme", novoTema);
+        });
+      }
+    });
+  </script>
+
+  <script src="relatorio.js"></script>
+</body>
+</html>

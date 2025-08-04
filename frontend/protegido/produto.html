@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos - MegCop</title>
+  <link rel="stylesheet" href="produto.css" />
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Produto</h1>
+    <button class="btn-voltar" onclick="window.location.href='../pagins/home.html'">← Início</button>
+    <button class="theme-toggle-btn" id="btnTema">Alternar Tema</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Adicionar Produto</h2>
+      <form id="formProduto" autocomplete="off">
+        <input type="hidden" id="produto_id" />
+        <input type="text" id="nome" placeholder="Nome do Produto" required />
+        <input type="text" id="descricao" placeholder="Descrição" required />
+        <input type="text" id="linha_producao" placeholder="Linha de Produção" required />
+        <select id="armazem_id" required>
+          <option value="">Selecione um Armazém</option>
+        </select>
+        <button type="submit">Salvar Produto</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Produtos Cadastrados</h2>
+      <div class="cards-container" id="tabelaProdutos"></div>
+    </section>
+  </main>
+
+  <script>
+    const botaoTema = document.getElementById("btnTema");
+
+    // Aplica o tema salvo na inicialização
+    if (localStorage.getItem("tema") === "dark") {
+      document.body.classList.add("dark");
+    }
+
+    // Alterna o tema e salva
+    botaoTema.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      const temaAtual = document.body.classList.contains("dark") ? "dark" : "light";
+      localStorage.setItem("tema", temaAtual);
+    });
+  </script>
+
+  <script src="produto.js"></script>
+</body>
+</html>

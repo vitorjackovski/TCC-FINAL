@@ -1,0 +1,251 @@
+body {
+  background: linear-gradient(
+    200deg,
+    #c19a00 0%,
+    #b44500 100%
+  ); /* Fundo com gradiente dourado/laranja */
+  color: #222; /* Cor do texto principal */
+  font-family: "Segoe UI", Arial, sans-serif; /* Fonte moderna */
+  min-height: 100vh; /* Garante altura mínima da tela */
+  margin: 0; /* Remove margens padrão */
+  transition: background 0.3s, color 0.3s; /* Suaviza transição de tema */
+}
+
+.top-gradient {
+  position: absolute; /* Fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(
+    200deg,
+    #ffde59 0%,
+    #ff914d 100%
+  ); /* Gradiente decorativo */
+  z-index: -1; /* Fica atrás do conteúdo */
+}
+
+.cadastro-container {
+  display: flex; /* Layout em linha */
+  align-items: flex-start; /* Alinha ao topo */
+  background: rgba(255, 255, 255, 0.97); /* Fundo branco translúcido */
+  border-radius: 18px; /* Cantos arredondados */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); /* Sombra suave */
+  padding: 40px 32px; /* Espaçamento interno */
+  gap: 36px; /* Espaço entre imagem e formulário */
+  margin: 100px auto 0 auto; /* Centraliza na tela */
+  max-width: 900px; /* Largura máxima */
+}
+
+.cadastro-img {
+  width: 320px; /* Largura da imagem */
+  height: auto;
+  border-radius: 16px; /* Cantos arredondados */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.cadastro-content {
+  flex: 1; /* Ocupa o restante do espaço */
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+body.dark {
+  background: linear-gradient(
+    200deg,
+    #23272a 0%,
+    #181a1b 100%
+  ); /* Fundo escuro */
+  color: #f1f1f1; /* Texto claro */
+}
+
+body.dark .top-gradient {
+  background: linear-gradient(
+    200deg,
+    #3a2d00 0%,
+    #4d2c1a 100%
+  ); /* Gradiente escuro */
+}
+
+body.dark .cadastro-container {
+  background: rgba(24, 26, 27, 0.98); /* Fundo escuro translúcido */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
+}
+
+body.dark .cadastro-content,
+body.dark .cadastro-benefits {
+  color: #f1f1f1;
+}
+
+body.dark .cadastro-benefits span {
+  color: #bdbdbd;
+}
+
+body.dark .cadastro-img {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+body.dark input[type="text"],
+body.dark input[type="email"],
+body.dark input[type="password"] {
+  background: #23272a;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+body.dark label {
+  color: #e0e0e0;
+}
+
+body.dark button {
+  background: #ff914d;
+  color: #181a1b;
+}
+
+body.dark .login-prompt {
+  color: #e0e0e0;
+}
+
+body.dark .login-prompt a {
+  color: #ffde59;
+}
+
+body.dark .footer-content {
+  color: #bdbdbd;
+}
+
+/* Botão principal do formulário */
+button {
+  padding: 10px 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.login-prompt {
+  margin-top: 24px;
+  font-size: 1.05rem;
+  color: #333;
+  text-align: left;
+}
+.login-prompt a {
+  color: #ff914d;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.cadastro-benefits {
+  margin-bottom: 24px; /* Espaço abaixo dos benefícios */
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.cadastro-benefits span {
+  font-weight: normal;
+  color: #444;
+  font-size: 1rem;
+}
+
+form {
+  width: 100%; /* Ocupa toda a largura do container */
+  margin-bottom: 18px;
+}
+label {
+  font-weight: 500; /* Destaque para o texto do label */
+  color: #333;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%; /* Campos ocupam toda a largura */
+  padding: 10px;
+  margin: 6px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  color: #222;
+  transition: border 0.2s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 1.5px solid #ff914d; /* Destaque ao focar */
+  outline: none;
+}
+button {
+  padding: 10px 24px;
+  background: #ff914d; /* Cor principal do botão */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px 0 0 0;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #ff7e5f; /* Efeito hover */
+}
+
+.theme-toggle-btn {
+  position: fixed; /* Fixa o botão na tela */
+  top: 24px;
+  right: 32px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background: #ff914d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s;
+}
+.theme-toggle-btn:hover {
+  background: #ff7e5f;
+}
+body.dark .theme-toggle-btn {
+  background: #ffde59;
+  color: #222;
+}
+body.dark .theme-toggle-btn:hover {
+  background: #ffe484;
+}
+
+body,
+.cadastro-container,
+.top-gradient,
+.cadastro-content,
+.cadastro-benefits,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button,
+.theme-toggle-btn {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+.home {
+  position: fixed;
+  top: 765px;
+  left: 1000px;
+  background-color: #ff914d;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.home:hover {
+  background-color: #e2710f;
+}

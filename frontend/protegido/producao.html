@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produção - MegCop</title>
+  <link rel="stylesheet" href="producao.css" />
+</head>
+<body>
+  <header>
+    <h1>Gerenciar Produções</h1>
+    <button class="btn-voltar" onclick="window.location.href='../pagins/home.html'">← Voltar ao Início</button>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h2>Cadastrar Produção</h2>
+      <form id="formProducao" autocomplete="off">
+        <input type="hidden" id="producao_id" />
+        
+        <label for="produto_id">ID do Produto:</label>
+        <input type="text" id="produto_id" placeholder="ID do Produto" required />
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" placeholder="Quantidade" required />
+
+        <label for="data_producao">Data de Produção:</label>
+        <input type="date" id="data_producao" required />
+
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+
+    <section class="lista">
+      <h2>Produções Cadastradas</h2>
+      <div id="listaProducoes" class="cards-container"></div>
+    </section>
+  </main>
+
+  <!-- 🌙 Botão de alternância de tema -->
+  <button class="theme-toggle-btn" onclick="toggleTheme()">Alternar Tema</button>
+
+  <!-- 📜 Script de alternância e persistência -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('tema', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    window.onload = function () {
+      const temaSalvo = localStorage.getItem('tema');
+      if (temaSalvo === 'dark') {
+        document.body.classList.add('dark');
+      }
+    };
+  </script>
+
+  <script src="producao.js" defer></script>
+</body>
+</html>

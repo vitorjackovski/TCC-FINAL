@@ -1,0 +1,196 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(200deg, #c19a00 0%, #b44500 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: linear-gradient(200deg, #23272a 0%, #181a1b 100%);
+  color: white;
+}
+
+/* Container do login */
+.login-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 20px;
+  padding: 40px 60px;
+  gap: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  width: 90%;
+}
+
+body.dark .login-container {
+  background: rgba(24, 26, 27, 0.98);
+}
+
+/* Imagem à esquerda */
+.login-img {
+  width: 300px;
+}
+
+.login-img img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteúdo do formulário */
+.login-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+
+.login-content h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.login-content p {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+body.dark .login-content p {
+  color: #ddd;
+}
+
+/* Inputs */
+label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  background: #f9f9f9;
+  color: #222;
+}
+
+body.dark input[type="email"],
+body.dark input[type="password"] {
+  background: #eee;
+  color: black;
+  border: 1px solid #444;
+}
+
+/* Botão Entrar */
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: orange;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 16px;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: orangered;
+}
+
+/* Link Esqueceu senha + Parceiro */
+.esqueceuSenha {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+.esqueceuSenha a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+body.dark .esqueceuSenha a {
+  color: #ccc;
+}
+
+.esqueceuSenha a:hover {
+  text-decoration: underline;
+  color: orangered;
+}
+
+/* Cadastro */
+.cadastro {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.cadastro a {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cadastro a:hover {
+  text-decoration: underline;
+}
+
+/* Botão de mudar tema */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: orange;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.theme-toggle-btn:hover {
+  background-color: orangered;
+}
+
+/* Botão Início */
+.home {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: black;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.home:hover {
+  background-color: #eee;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./login.css" />
+  <title>Login</title>
+</head>
+<body>
+  <button class="home" onclick="window.location.href='./home.html'">Início</button>
+
+  <div class="login-container">
+    <img src="../../imgs/4794658.jpg" alt="Login imagem" class="login-img" />
+
+    <div class="login-content">
+      <h1 class="texto">Acesse sua Conta</h1>
+      <p class="texto2">Use os dados da sua conta Meg Cop</p>
+
+      <form id="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required />
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <div class="esqueceuSenha">
+        <a href="esqueceuSenha.html">Esqueceu sua senha?</a>
+        <a href="parceiros.html">Parceiros</a>
+      </div>
+
+      <p class="texto3">Ainda não tem conta na Meg Cop?</p>
+      <a class="cadastro" href="cadastro.html">Cadastre-se agora!</a>
+    </div>
+  </div>
+
+  <button id="toggle-theme" class="theme-toggle-btn">Alterar tema</button>
+
+  <script>
+    const toggleButton = document.getElementById('toggle-theme');
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Envio do login atualizado
+document.getElementById("login-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const senha = document.getElementById("senha").value;
+
+  try {
+    const response = await fetch("http://localhost:3000/api/usuarios/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, senha }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      const { token, usuario } = data;
+
+      if (usuario.role === 'admin') {
+        localStorage.setItem('tokenAdmin', token);
+        window.location.href = './home.html';
+      } else {
+        localStorage.setItem('tokenCliente', token);
+        window.location.href = './home.html';
+      }
+    } else {
+      alert(data.mensagem || data.erro || "Erro ao fazer login.");
+    }
+  } catch (error) {
+    console.error("Erro:", error);
+    alert("Erro ao conectar com o servidor.");
+  }
+
+  verificarAutomatizados()
+});
+  </script>
+</body>
+</html>

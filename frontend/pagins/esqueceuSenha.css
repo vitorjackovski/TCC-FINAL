@@ -1,0 +1,77 @@
+body {
+  background: linear-gradient(
+    200deg,
+    #c19a00 0%,
+    #b44500 100%
+  ); /* Fundo com gradiente dourado/laranja */
+  color: #222; /* Cor do texto principal */
+  font-family: "Segoe UI", Arial, sans-serif; /* Fonte moderna */
+  min-height: 100vh; /* Garante altura mínima da tela */
+  margin: 0; /* Remove margens padrão */
+  transition: background 0.3s, color 0.3s; /* Suaviza transição de tema */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.97); /* Fundo branco translúcido */
+  border-radius: 18px; /* Cantos arredondados */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); /* Sombra suave */
+  padding: 40px 32px; /* Espaçamento interno */
+  margin: 100px auto 0 auto; /* Centraliza na tela */
+  max-width: 400px; /* Largura máxima */
+  display: flex; /* Layout em coluna */
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 24px; /* Espaço abaixo do título */
+  color: #b44500; /* Cor do título */
+}
+
+form {
+  width: 100%; /* Ocupa toda a largura do container */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 18px;
+}
+label {
+  font-weight: 500; /* Destaque para o texto do label */
+  color: #333;
+}
+input[type="email"] {
+  width: 100%; /* Campo ocupa toda a largura */
+  padding: 10px;
+  margin: 6px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  color: #222;
+  transition: border 0.2s;
+}
+input[type="email"]:focus {
+  border: 1.5px solid #ff914d; /* Destaque ao focar */
+  outline: none;
+}
+button {
+  padding: 10px 24px;
+  background: #ff914d; /* Cor principal do botão */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px 0 0 0;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #ff7e5f; /* Efeito hover */
+}
+a {
+  color: #ff914d; /* Cor do link */
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top: 16px;
+}

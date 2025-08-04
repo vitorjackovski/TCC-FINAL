@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>home page</title>
+    <link rel="stylesheet" href="./home.css" />
+</head>
+<body>
+
+    <!-- a barra onde fica a logo site -->
+    <div class="barraInicial">
+        <img class="logo" src="../../imgs/favpng_899cfcb3de1b344188e78a4592394aec.png" width="149" height="109" alt="Logo Meg Cop">
+    </div>
+
+    <!-- Botoes para links de html -->
+    <div>
+        <a href="./login.html">Entrar</a>
+        <a href="./cadastro.html">Cadastrar</a>
+        <a href="../protegido/relatorio.html">relatorios</a>
+        <a href="../protegido/armazem.html">armazem</a>
+        <a href="../protegido/producao.html">Produção</a>
+        <a href="../protegido/produto.html">Produto</a>
+        <a href="../protegido/alertas.html">alertas</a>
+        <a href="../protegido/parceiros.html">parceiros</a>
+    </div>
+
+    <!-- Lugar onde pode-se fazer a pesquisa do produto -->
+    <div class="pesquisa">
+        <h1 class="h1">Rastreie seus produtos e encomendas</h1>
+        <form action="/search" method="get">
+            <input type="text" name="q" placeholder="Código do Produto" class="Codigo" />
+            <input type="submit" value="Rastrear" class="Codigo2" />
+        </form>
+    </div>
+
+    <!-- 1 IMG -->
+    <div class="Inicio-container">
+        <img id="inicio-img" class="Inicio-img" src="../../imgs/341335122.jpg" alt="Imagem inicial" />
+    </div>
+
+    <!-- opções de como o site ajuda -->
+    <div>
+        <h1 class="h2">Veja como a Meg Cop pode facilitar sua rotina</h1>
+    </div>
+
+
+    <div class="info1">
+        <img src="../../imgs/Captura de tela 2025-06-12 144457.png" class="cll" id="cll-img" alt="Acompanhe suas encomendas" />
+        <h1 class="h3">Acompanhe suas encomendas</h1>
+        <p class="aqui">A Meg Cop foi desenvolvido para facilitar a visualização de suas encomendas. Nada de atualizações misteriosas e difíceis de entender.</p>
+    </div>
+
+    <div class="info2">
+        <img id="ring-img" src="../../imgs/Captura de tela 2025-06-12 153050.png" class="ring" alt="Receba notificações" />
+        <h1 class="h3">Receba notificações</h1>
+        <p class="oque">Você acompanha tudo o que acontece com a sua encomenda diretamente no seu e-mail.</p>
+    </div>
+
+    <!-- ... -->
+
+    <div class="barra-lara">
+        <h2>nada</h2>
+    </div>
+
+    <!-- Ajuda -->
+    <div class="ff">
+        <img id="ff-img" src="../../imgs/Captura de tela 2025-06-13 165349.png" alt="Ajuda" style="border-radius:12px;width:95%;" />
+    </div>
+
+    <div>
+        <h1 class="tt">Precisa de ajuda com nosso site?</h1>
+        <p class="pp">Veja o que fazer em cada um dos casos:</p>
+    </div>
+
+    <div class="problemas">
+        <img id="problema-img" src="../../imgs/Captura de tela 2025-06-16 160953.png" alt="Ajuda" style="border-radius:12px;width:55%;" />
+    </div>
+
+    <!-- Botão para alternar tema -->
+    <button id="toggle-theme" class="theme-toggle-btn" aria-label="Alternar tema" title="Alternar tema claro/escuro">
+      <span id="theme-icon" style="font-size:1.3em;vertical-align:middle;">🌙</span>
+      <span id="theme-label">Alterar tema</span>
+    </button>
+
+    <!-- Botão Sair da conta -->
+    <button id="logout">Sair da conta</button>
+
+    <!-- Footer -->
+    <div>
+        <h1 class="Meg">Meg Cop 2025</h1>
+        <h2 class="Termos">Termos de Uso Política de Privacidade</h2>
+    </div>
+
+    <div class="nada2">
+        <p>nada2</p>
+    </div>
+
+    <footer>
+        <h1 class="Mini">Meg Cop 2025</h1>
+        <h2 class="Sempre">Sempre com Você</h2>
+    </footer>
+
+    <script>
+
+      // Alternar tema claro/escuro
+      const toggleButton = document.getElementById('toggle-theme');
+      const themeIcon = document.getElementById('theme-icon');
+      const themeLabel = document.getElementById('theme-label');
+      const problemaImg = document.getElementById('problema-img');
+      const ffImg = document.getElementById('ff-img');
+      const ringImg = document.getElementById('ring-img');
+      const cllImg = document.getElementById('cll-img');
+      const inicioImg = document.getElementById('inicio-img');
+
+      function setThemeIcon() {
+        if (document.body.classList.contains('dark')) {
+          themeIcon.textContent = '🌕';
+          themeLabel.textContent = 'Tema claro';
+        } else {
+          themeIcon.textContent = '🌙';
+          themeLabel.textContent = 'Tema escuro';
+        }
+      }
+
+      function setProblemaImg() {
+        problemaImg.src = document.body.classList.contains('dark')
+          ? '../../imgs/Captura de tela 2025-06-16 160944.png'
+          : '../../imgs/Captura de tela 2025-06-16 160953.png';
+      }
+
+      function setFfImg() {
+        ffImg.src = document.body.classList.contains('dark')
+          ? '../../imgs/Captura de tela 2025-06-16 160919.png'
+          : '../../imgs/Captura de tela 2025-06-13 165349.png';
+      }
+
+      function setringImg() {
+        ringImg.src = document.body.classList.contains('dark')
+          ? '../../imgs/Captura de tela 2025-06-16 160909.png'
+          : '../../imgs/Captura de tela 2025-06-12 153050.png';
+      }
+
+      function setcllImg() {
+        cllImg.src = document.body.classList.contains('dark')
+          ? '../../imgs/Captura de tela 2025-06-16 160749.png'
+          : '../../imgs/Captura de tela 2025-06-12 144457.png';
+      }
+
+      function setInicioImg() {
+        inicioImg.src = document.body.classList.contains('dark')
+          ? '../../imgs/Captura de tela 2025-06-16 160738.png'
+          : '../../imgs/341335122.jpg';
+      }
+
+      // Ao carregar a página, verifica o tema salvo
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+      setThemeIcon();
+      setProblemaImg();
+      setFfImg();
+      setcllImg();
+      setringImg();
+      setInicioImg();
+
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        setThemeIcon();
+        setProblemaImg();
+        setFfImg();
+        setcllImg();
+        setringImg();
+        setInicioImg();
+
+        // Salva a preferência no localStorage
+        if (document.body.classList.contains('dark')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+
+      // Botão logout
+      document.getElementById("logout").addEventListener("click", () => {
+        localStorage.removeItem("tokenAdmin");  // Apaga token para "deslogar"
+        window.location.href = "./login.html";  // Redireciona para a tela de login
+      });
+    </script>
+</body>
+</html>

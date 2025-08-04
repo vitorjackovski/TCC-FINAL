@@ -1,0 +1,237 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e5d4b0, #cc8d1e);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Modo Escuro */
+body.dark {
+  background: linear-gradient(135deg, #141414, #2c2c2c);
+  color: #eee;
+}
+
+body.dark header {
+  background-color: #1e1e1e;
+  color: #ffca28;
+}
+
+body.dark .form-section,
+body.dark .list-section {
+  background: #252525;
+  color: #f1f1f1;
+}
+
+body.dark input[type="text"] {
+  background: #444;
+  color: #fff;
+  border-color: #666;
+}
+
+body.dark input[type="text"]:focus {
+  border-color: #ff9800;
+}
+
+body.dark .btn-cancel {
+  background: #888;
+}
+
+body.dark .btn-cancel:hover {
+  background: #666;
+}
+
+body.dark .parceiro-info h3 {
+  color: #ff9800;
+}
+
+body.dark .parceiro-info p {
+  color: #ccc;
+}
+
+body.dark .parceiro-actions button {
+  background: #1976d2;
+}
+
+body.dark .parceiro-actions button.delete-btn {
+  background: #b71c1c;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #d35400;
+  color: #fff;
+  padding: 20px 40px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Container Principal */
+.container {
+  max-width: 1100px;
+  width: 90%;
+  display: flex;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Seções */
+.form-section, .list-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  flex: 1 1 400px;
+  min-width: 320px;
+}
+
+/* Títulos & Labels */
+h1, h2 {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #d35400;
+}
+
+/* Botões */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  color: white;
+  background: #d35400;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e67e22;
+}
+
+.btn-cancel {
+  background: #888;
+}
+
+.btn-cancel:hover {
+  background: #555;
+}
+
+/* Lista de Parceiros */
+.lista-parceiros {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.parceiro-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parceiro-info {
+  max-width: 75%;
+}
+
+.parceiro-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #d35400;
+}
+
+.parceiro-info p {
+  margin: 3px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Ações */
+.parceiro-actions button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background: #2980b9;
+}
+
+.parceiro-actions button.delete-btn {
+  background: #c0392b;
+}
+
+.parceiro-actions button:hover {
+  opacity: 0.85;
+}
+
+/* Botões Fixos */
+.home,
+.btnTema {
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.home {
+  right: 20px;
+}
+
+.btnTema {
+  left: 20px;
+}
+
+.home:hover,
+.btnTema:hover {
+  background: #e68900;
+}

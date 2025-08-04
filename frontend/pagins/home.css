@@ -1,0 +1,425 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.barraInicial{
+    background-image: url("../../imgs/Captura de tela 2025-06-13 155610.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.h1{
+    color: #ffc911;
+    font-size: 30px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.h2{
+    color: #ffc911;
+    font-size: 50px;
+    text-align: center;
+    width: 500px;
+    margin-left: 700px;
+}
+
+.h3{
+    color: #ffb301;
+    font-size: 40px;
+    text-align: center;
+}
+
+.oque{
+    font-size: 60px;
+    width: 352px;
+    text-align: center;
+}
+
+.aqui{
+    font-size: 30px;
+    width: 350px;
+    text-align: center;
+}      
+
+.Codigo{
+    width: 650px;
+    text-align: center;
+    height: 35px;
+}
+
+.pesquisa{
+    text-align: center;
+    margin-top: 100px;
+}
+.Codigo2{
+    width: 120px;
+    text-align: center;
+    height: 43px;
+    background-color: #ffb301;
+    font-size: 20px;
+    border-color: #ffb301;
+    border-style: dashed;
+}
+
+.info1, .info2{
+    display: inline-table;
+    align-items: center;
+    margin-right: 150px;
+    text-align: center;
+    
+}
+
+.info1{
+    margin-left: 300px;
+    margin-bottom: 100px;
+}
+
+
+
+.titulo-principal {
+    color: #ffc911;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.titulo-secundario {
+    color: #ffc911;
+    font-size: 35px;
+    text-align: right;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+}
+
+.titulo-terciario {
+    color: #ffb301;
+    font-size: 25px;
+    text-align: center;
+}
+
+.oque, .aqui {
+    font-size: 20px;
+    max-width: 352px;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.Codigo {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    height: 35px;
+    margin: 0 auto 20px auto;
+}
+
+.pesquisa {
+    text-align: center;
+}
+
+.Codigo2 {
+    width: 120px;
+    text-align: center;
+    height: 43px;
+    background-color: #ffb301;
+    font-size: 20px;
+    border: 2px dashed #ffb301;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.Codigo2:hover {
+    background-color: #ffc911;
+}
+
+.Inicio-img{        
+    margin: 40px auto;       /* centraliza */
+    width: 800px;             /* define um tamanho fixo ou % apropriada */
+    max-width: 100%;         /* garante que não estoure o container */
+    height: auto;            /* mantém a proporção */
+}
+
+.Inicio-container{
+    margin-left: 510px;
+}
+
+
+.info1, .info2 {
+    display: inline-table;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.info1 {
+    margin-left: 350px;
+}
+
+.barra-lara{
+    background-color: #ffb301;
+    width: 100%;
+    color: #ffb301;
+    height: 250px;
+    margin: 0%;
+    border-radius: 0%;
+}
+
+.ring{
+    width: 300px;
+}
+
+a{
+    position: relative;
+    padding: .8rem;
+    width: 100px;
+    font-size: 1rem;
+    background-color: #ffc911;
+    border: none;
+    border-radius: 1rem;
+    color: black;
+    margin-top: 2rem;
+    cursor: pointer;
+    border-style: solid;
+    border-color: #fff282;
+}
+
+
+.problemas{
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 600px;
+}
+
+.pp{
+    margin-left: 730px;
+    font-size: 25px;
+}
+
+.tt{
+    margin-left: 790px;
+    font-size: 35px;
+    width: 290px;
+    color: #ffb301;
+    text-align: center;
+}
+
+.ff{
+    width: 640px;
+    height: 420px;
+    margin-left: 620px;
+}
+
+.nada2{
+    background-color: #ffb301;
+    font-size: 5px;
+    color: #ffb301;
+}
+
+.Meg{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.Termos{
+    color: #ffc911;
+    font-size: 20px;
+    width: 185px;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: 855px;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.Mini{
+    font-size: 13px;
+}
+
+.Sempre{
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+/* Tema escuro */
+body.dark {
+    background-color: #000000;
+    color: #f1f1f1;
+}
+
+body.dark .barraInicial,
+body.dark .barra-lara,
+body.dark .nada2 {
+    background-color: #ffb301;
+}
+
+body.dark .h1,
+body.dark .h2,
+body.dark .h3,
+body.dark .Termos,
+body.dark .tt {
+    color: #ffd700;
+}
+
+body.dark a {
+    background-color: #333;
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+body.dark .Codigo2 {
+    background-color: #333;
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+body.dark .info1, body.dark .info2 {
+    background-color: #000000;
+}
+
+body.dark footer {
+    background-color: #000000;
+    color: #ffd700;
+}
+
+body.dark .Mini, body.dark .Sempre {
+    color: #ffd700;
+}
+
+body.dark input[type="text"] {
+    background: #222;
+    color: #ffd700;
+    border: 1px solid #ffd700;
+}
+
+body.dark .problemas img[src*="160953"] {
+    filter: brightness(0.6) grayscale(0.2) contrast(1.1) !important;
+    box-shadow: 0 0 16px #ffd70055;
+    border-radius: 12px;
+    width: 640px;
+    height: 420px;
+}
+
+body.dark .ff img[src*="165349"] {
+    filter: brightness(0.6) grayscale(0.2) contrast(1.1) !important;
+    box-shadow: 0 0 16px #ffd70055;
+    border-radius: 12px;
+    width: 640px;
+    height: 420px;
+    margin-left: 620px;
+}
+
+body.dark .ring img[src*="153050"] {
+    filter: brightness(0.6) grayscale(0.2) contrast(1.1) !important;
+    box-shadow: 0 0 16px #ffd70055;
+    border-radius: 12px;
+    width: 640px;
+    height: 420px;
+}
+
+body.dark .cll img[src*="160749"] {
+    filter: brightness(0.6) grayscale(0.2) contrast(1.1) !important;
+    box-shadow: 0 0 16px #ffd70055;
+    border-radius: 12px;
+    width: 640px;
+    height: 420px;
+}
+
+.theme-toggle-btn {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 1000;
+    background: linear-gradient(90deg, #ffb301 60%, #ffd700 100%);
+    color: #222;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #0002;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+.theme-toggle-btn:hover {
+    background: linear-gradient(90deg, #ffd700 60%, #ffb301 100%);
+    color: #000;
+    box-shadow: 0 4px 16px #0003;
+}
+body.dark .theme-toggle-btn {
+    background: linear-gradient(90deg, #232323 60%, #444 100%);
+    color: #ffd700;
+    box-shadow: 0 2px 8px #ffd70033;
+}
+body.dark .theme-toggle-btn:hover {
+    background: linear-gradient(90deg, #444 60%, #232323 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px #ffd70055;
+}
+
+#logout {
+  margin-top: 20px;  /* diminua o valor para subir o botão */
+  display: flex;    /* para garantir que ocupe linha separada */
+  margin-left: auto; /* centraliza horizontalmente */
+  margin-right: auto;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  outline: none;
+  width: max-content; /* botão com largura mínima */
+}
+
+
+#logout:hover {
+  background-color: #e26c3d;
+}
